@@ -1,0 +1,150 @@
+@startuml
+top to bottom direction
+skinparam headerFontSize 30
+skinparam headerFontStyle bold
+skinparam classAttributeIconSize 0
+scale 1.0
+package application {
+class application.Plate {
+.. Fields  ..
+~value : int
+.. Methods ..
++addPlate(Group) : void
++getNum() : int
++setValue(int) : void
+}
+class application.Tutorial {
+.. Fields  ..
+-backButton : Button
+-image : Image
+-imageView : ImageView
+-playButton : Button
+-tutorialButtons : Button[]
+-tutorialLabel : Label
+-tutorialRoot : Group
+-tutorialScene : Scene
+.. Methods ..
++getScene() : Scene
+}
+class application.Game {
+.. Fields  ..
+-backButton : Button
+-bestLabel : Label
+-bestResultLabel : Label
+-currentResultLabel : Label
+-gameRoot : Group
+-gameScene : Scene
+-isWin : boolean
+-nClearPlates : int
+-nextPos : int
+-nextValue : int
+-plates : Plate[][]
+-quads : Button[][]
+-random : Random
+-scoreLabel : Label
+-totalScore : int
+.. Methods ..
+-congestion() : boolean
+-createPlate() : void
+-endGame() : void
++getScene() : Scene
+-moveDown() : boolean
+-moveLeft() : boolean
+-moveRight() : boolean
+-moveUp() : boolean
+-randHardMode() : void
+-rotate(String) : void
+.. Static ..
+- {static} bestScore : int
+}
+class application.EndGame {
+.. Fields  ..
+-EndGameRoot : Group
+-EndGameScene : Scene
+-okButton : Button
+-questionLabel : Label
+.. Methods ..
++getScene() : Scene
+}
+class application.Main {
+.. Methods ..
++start(Stage) : void
+.. Static ..
++ {static} main() : void
+}
+class application.GameManager {
+.. Fields  ..
+.. Methods ..
++run(Stage) : void
+.. Static ..
++ {static} setScene() : void
+- {static} continueGame : ContinueGame
+- {static} endGame : EndGame
+- {static} game : Game
+- {static} menu : Menu
+- {static} primaryStage : Stage
+- {static} questionGame : QuestionGame
+- {static} questionMenu : QuestionMenu
+- {static} tutorial : Tutorial
+}
+class application.QuestionGame {
+.. Fields  ..
+-noButton : Button
+-questionLabel : Label
+-questionRoot : Group
+-questionScene : Scene
+-yesButton : Button
+.. Methods ..
++getScene() : Scene
+}
+class application.QuestionMenu {
+.. Fields  ..
+-noButton : Button
+-questionLabel : Label
+-questionRoot : Group
+-questionScene : Scene
+-yesButton : Button
+.. Methods ..
++getScene() : Scene
+}
+class application.Menu {
+.. Fields  ..
+-exitButton : Button
+-gameLabel : Label
+-hardModeButton : Button
+-hardModeLabel : Label
+-isMute : boolean
+-menuRoot : Group
+-menuScene : Scene
+-muteButton : Button
+-muteLabel : Label
+-settingsLabel : Label
+-startButton : Button
+-tutorialButton : Button
+.. Methods ..
++getScene() : Scene
+.. Static ..
++ {static} isHardMode() : boolean
+- {static} isHardMode : boolean
+}
+class application.ContinueGame {
+.. Fields  ..
+-ContinueGameRoot : Group
+-ContinueGameScene : Scene
+-noButton : Button
+-questionLabel : Label
+-yesButton : Button
+.. Methods ..
++getScene() : Scene
+}
+
+}
+application.Game *-- "0..*" application.Plate
+application.GameManager o-- "1..1" application.Menu
+application.GameManager o-- "1..1" application.Game
+application.GameManager o-- "1..1" application.QuestionMenu
+application.GameManager o-- "1..1" application.QuestionGame
+application.GameManager o-- "1..1" application.Tutorial
+application.GameManager o-- "1..1" application.ContinueGame
+application.GameManager o-- "1..1" application.EndGame
+@enduml

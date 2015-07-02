@@ -1,0 +1,116 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+.menuButton:hover
+{
+	-fx-background-color: #FFEFD5;
+	-fx-text-fill: #808080;
+}
+
+.menuButton
+{
+	-fx-font: bold italic 14pt Impact;
+	-fx-text-fill: #efe58b;
+	-fx-background-color: #8fbc8f;
+	-fx-border-width: 3px ;
+	-fx-border-radius: 10;
+	-fx-background-radius: 9;
+	-fx-border-color: #808000;
+}
+
+.gameLabel
+{
+	-fx-font: bold italic 78pt Impact;
+	-fx-text-fill: #fa8072;
+}
+
+.settingsLabel
+{
+	-fx-font: bold italic 25pt Impact;
+	-fx-text-fill: #696969;
+}
+
+.settingsInfLabel
+{
+	-fx-font: bold italic 15pt Impact;
+	-fx-text-fill: #696969;
+}
+
+.tutorialLabel
+{
+	-fx-font: bold italic 15pt Impact;
+	-fx-text-fill: #ffb504;
+}
+
+.questionLabel
+{
+	-fx-font: bold italic 45pt Impact;
+	-fx-text-fill: #fa8072;
+}
+
+.gameScore
+{
+	-fx-font: bold italic 28pt Impact;
+	-fx-text-fill: #A9A9A9;
+}
+
+.currentScore
+{
+	-fx-font: bold italic 28pt Impact;
+	-fx-text-fill: #fa8072;
+}
+
+.gameQuadButton
+{
+	-fx-background-color: #fffacd;
+	-fx-font: bold italic 12pt Impact;
+	-fx-border-width: 2px;
+	-fx-border-color: #808000;
+}
+
+.gameQuadButton:hover
+{
+	-fx-background-color: #5F9EA0;
+}
+
+.gamePlateButton
+{
+	-fx-text-fill: #000000;
+	-fx-border-width: 3px ;
+	-fx-border-color: #B22222;
+}
+
+.unSelectButton
+{
+	-fx-background-color: #D3D3D3;
+	-fx-border-width: 3px ;
+	-fx-border-radius: 10;
+	-fx-background-radius: 9;
+	-fx-border-color: #808000;
+	-fx-graphic: url('file:///D:/Learning/ÊÏÏ/Èãðà/2048/src/application/mark2.png');
+}
+
+.unSelectButton:hover
+{
+	-fx-background-color: #FAEBD7;
+	-fx-text-fill: #808080;
+}
+
+.selectButton
+{
+	-fx-background-color: #D3D3D3;
+	-fx-border-width: 3px ;
+	-fx-border-radius: 10;
+	-fx-background-radius: 9;
+	-fx-border-color: #808000;
+	-fx-graphic: url('file:///D:/Learning/ÊÏÏ/Èãðà/2048/src/application/mark1.png');
+}
+
+.selectButton:hover
+{
+	-fx-background-color: #FAEBD7;
+	-fx-text-fill: #808080;
+}
+
+
+
+
+
